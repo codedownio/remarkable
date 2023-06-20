@@ -21,7 +21,7 @@ demo: lint
 lint:
 	eslint ./bin ./lib ./support ./test
 
-test: lint
+test:
 	NODE_ENV=test mocha -R spec
 	echo "CommonMark stat:\n"
 	./support/specsplit.js test/fixtures/commonmark/spec.txt
